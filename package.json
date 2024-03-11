@@ -6,17 +6,20 @@
   "scripts": {
     "build": "stencil build",
     "start": "stencil build --dev --watch --serve",
-    "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll",
-    "generate": "stencil generate"
+    "working": "npm i @stencil/core@4.12.1 && npm start",
+    "broken": "npm i @stencil/core@4.12.2 && npm start"
   },
   "devDependencies": {
-    "@stencil-community/router": "^1.0.2",
-    "@stencil/core": "2.13.0",
+    "@stencil/core": "^4.12.2",
     "@types/jest": "^27.0.3",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
     "puppeteer": "^10.0.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "jeep-sqlite": "^2.6.1",
+    "rollup-plugin-node-polyfills": "^0.2.1",
+    "typescript": "^4.3.5"
+  }
 }
